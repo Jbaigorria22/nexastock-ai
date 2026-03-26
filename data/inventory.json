@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Product A",
+    "stock": 120,
+    "price": 50,
+    "reorder_level": 100
+  },
+  {
+    "name": "Product B",
+    "stock": 20,
+    "price": 30,
+    "reorder_level": 50
+  },
+  {
+    "name": "Product C",
+    "stock": 0,
+    "price": 80,
+    "reorder_level": 40
+  },
+  {
+    "name": "Product D",
+    "stock": 200,
+    "price": 10,
+    "reorder_level": 150
+  },
+  {
+    "name": "Product E",
+    "stock": 15,
+    "price": 60,
+    "reorder_level": 70
+  }
+]

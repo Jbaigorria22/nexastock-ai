@@ -1,0 +1,42 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "BedrockInvoke",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock:InvokeModel",
+        "bedrock:InvokeAgent"
+      ],
+      "Resource": "arn:aws:bedrock:us-east-1::foundation-model/*"
+    },
+    {
+      "Sid": "DynamoDBReadForContext",
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:GetItem",
+        "dynamodb:Query",
+        "dynamodb:Scan"
+      ],
+      "Resource": "arn:aws:dynamodb:us-east-1:720412502759:table/inventory"
+    },
+    {
+      "Sid": "SecretsManagerRead",
+      "Effect": "Allow",
+      "Action": [
+        "secretsmanager:GetSecretValue"
+      ],
+      "Resource": "arn:aws:secretsmanager:us-east-1:720412502759:secret:inventory/*"
+    },
+    {
+      "Sid": "CloudWatchLogs",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      "Resource": "arn:aws:logs:us-east-1:720412502759:*"
+    }
+  ]
+}
