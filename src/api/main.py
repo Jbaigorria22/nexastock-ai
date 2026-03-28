@@ -86,3 +86,7 @@ def compat_summary():
 @app.post("/copilot")
 def compat_copilot(q: QuestionCompat):
     return get_copilot_answer(q.question)
+
+# Handler para AWS Lambda
+from mangum import Mangum
+handler = Mangum(app)

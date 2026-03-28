@@ -1,5 +1,12 @@
-echo venv/ > .gitignore
-echo __pycache__/ >> .gitignore
-echo .env >> .gitignore
-echo *.pyc >> .gitignore
-echo test_bedrock.py >> .gitignore
+venv/
+__pycache__/
+*.pyc
+.env
+test_bedrock.py
+lambda_build/
+function.zip
+infrastructure/.terraform/
+infrastructure/.terraform.lock.hcl
+infrastructure/terraform.tfstate
+infrastructure/terraform.tfstate.backup
+*.zip

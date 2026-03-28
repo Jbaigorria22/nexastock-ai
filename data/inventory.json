@@ -1,32 +1,12 @@
 [
-  {
-    "name": "Product A",
-    "stock": 120,
-    "price": 50,
-    "reorder_level": 100
-  },
-  {
-    "name": "Product B",
-    "stock": 20,
-    "price": 30,
-    "reorder_level": 50
-  },
-  {
-    "name": "Product C",
-    "stock": 0,
-    "price": 80,
-    "reorder_level": 40
-  },
-  {
-    "name": "Product D",
-    "stock": 200,
-    "price": 10,
-    "reorder_level": 150
-  },
-  {
-    "name": "Product E",
-    "stock": 15,
-    "price": 60,
-    "reorder_level": 70
-  }
+  {"name": "Wireless Headphones Pro", "stock": 0, "reorder_level": 40, "price": 89.99, "category": "Electronics"},
+  {"name": "Ergonomic Office Chair", "stock": 8, "reorder_level": 25, "price": 299.99, "category": "Furniture"},
+  {"name": "USB-C Hub 7-in-1", "stock": 15, "reorder_level": 50, "price": 45.99, "category": "Electronics"},
+  {"name": "Standing Desk Mat", "stock": 120, "reorder_level": 30, "price": 34.99, "category": "Furniture"},
+  {"name": "Mechanical Keyboard TKL", "stock": 22, "reorder_level": 35, "price": 129.99, "category": "Electronics"},
+  {"name": "4K Webcam Ultra", "stock": 0, "reorder_level": 20, "price": 199.99, "category": "Electronics"},
+  {"name": "Laptop Stand Aluminum", "stock": 67, "reorder_level": 40, "price": 49.99, "category": "Accessories"},
+  {"name": "Noise Cancelling Earbuds", "stock": 5, "reorder_level": 30, "price": 159.99, "category": "Electronics"},
+  {"name": "Monitor Light Bar", "stock": 88, "reorder_level": 25, "price": 39.99, "category": "Accessories"},
+  {"name": "Smart Power Strip", "stock": 3, "reorder_level": 20, "price": 54.99, "category": "Electronics"}
 ]

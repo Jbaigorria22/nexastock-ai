@@ -4,8 +4,21 @@ from openai import OpenAI, OpenAIError
 from src.services.inventory_service import get_all_products, build_context
 
 logger = logging.getLogger(__name__)
-client = OpenAI()  # Lee OPENAI_API_KEY del entorno automáticamente
+import boto3
 
+def _get_openai_client():
+    """Lee la API key desde SSM Parameter Store en runtime."""
+    try:
+        ssm = boto3.client("ssm", region_name="us-east-1")
+        response = ssm.get_parameter(
+            Name="/inventory-app/openai-api-key",
+            WithDecryption=True
+        )
+        api_key = response["Parameter"]["Value"]
+        return OpenAI(api_key=api_key)
+    except Exception as e:
+        logger.warning(f"SSM unavailable, falling back to env: {e}")
+        return OpenAI()  # fallback al .env local
 SYSTEM_PROMPT = """You are a senior inventory analyst AI assistant.
 You provide concise, accurate, data-driven recommendations.
 You only use the inventory data provided — never invent products or stock levels.
@@ -18,7 +31,7 @@ def _call_openai(messages: list[dict], max_tokens: int = 600) -> str:
     Maneja errores de red, rate limits y respuestas vacías.
     """
     try:
-        response = client.chat.completions.create(
+        response = _get_openai_client().chat.completions.create(
             model="gpt-4o-mini",
             messages=messages,
             max_tokens=max_tokens,
