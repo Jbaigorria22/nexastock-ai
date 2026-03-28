@@ -4,7 +4,7 @@ import requests
 import plotly.graph_objects as go
 import streamlit.components.v1 as components
 
-API_BASE = "http://127.0.0.1:8000"
+API_BASE = "https://l5onbag8e6.execute-api.us-east-1.amazonaws.com/prod"
 
 st.set_page_config(
     page_title="Inventory Decision Dashboard",
