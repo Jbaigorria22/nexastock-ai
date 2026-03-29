@@ -30,3 +30,9 @@ resource "aws_lambda_permission" "api_gateway" {
   principal     = "apigateway.amazonaws.com"
   source_arn    = "${aws_api_gateway_rest_api.inventory.execution_arn}/*/*"
 }
+
+# Dale permiso a la Lambda para leer de SSM Parameter Store
+resource "aws_iam_role_policy_attachment" "lambda_ssm_policy" {
+  role       = split("/", var.lambda_role_arn)[1]
+  policy_arn = "arn:aws:iam::aws:policy/AmazonSSMReadOnlyAccess"
+}
