@@ -20,7 +20,9 @@ risks and prescribes actionable purchase plans — acting as an automated wareho
 
 ## 🏗️ Architecture
 
-![Architecture Diagram](docs/architecture.png)
+![NexaStock AI Dashboard](docs/dashboard-screenshot.png)
+
+
 
 | Layer | Technology | Purpose |
 |---|---|---|
